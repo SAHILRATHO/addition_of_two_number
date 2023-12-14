@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition of Two Number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Addition Calcuator</h1>
+
+        <div class="text">
+            <label for="v1"> Enter Tha First Number:</label>
+            <input type="number" id="v1"><br> <br>
+            <label for="v2">  Enter Tha Second Number:</label>
+            <input type="number" id="v2">
+        </div>
+
+        <div class="btn">
+            <input type="button" id="enter" value="calculate Sum" onclick="Addition()">
+
+        </div>
+        <div class="text">
+            <p id="sum"></p>
+        </div>
+    </div>
+    <script>
+        function Addition() {
+            var num1 = parseFloat(document.getElementById("v1").value)
+            var num2 = parseFloat(document.getElementById("v2").value)
+
+            if (!isNaN(num1) || !isNaN(num2)) {
+                var sum = num1+num2
+                document.getElementById("sum").innerHTML = `Tha Sum Of ${num1} And ${num2} Is :- ${sum}`
+            }
+            else {
+                document.getElementById("sum").innerText = "Plase enter a valid number"
+            }
+        }
+
+    </script>
+</body>
+</html>
